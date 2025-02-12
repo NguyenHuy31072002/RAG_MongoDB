@@ -98,7 +98,7 @@ async def handle_query(request: List[Dict[str, Any]]):
             reflected_query = reflection(data)
             query = reflected_query
             source_information = rag.enhance_prompt(query).replace('<br>', '\n')
-            combined_information = f"Hãy trở thành chuyên gia tư vấn bán hàng cho một cửa hàng điện thoại. Câu hỏi của khách hàng: {query}\nTrả lời câu hỏi dựa vào các thông tin sản phẩm dưới đây: {source_information}."
+            combined_information = f"Hãy trở thành chuyên gia tư vấn dịch vụ của ngân hàng LPBank. Câu hỏi của khách hàng: {query}\nTrả lời câu hỏi dựa vào các thông tin dưới đây: {source_information}."
             
             data.append({
                 "role": "user",
